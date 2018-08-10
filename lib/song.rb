@@ -12,13 +12,16 @@ class Song
 
   @@songs = []
 
+  def initialize
+    super
+  end
+
   def self.all
     @@songs
   end
 
   def artist=(artist)
     @artist = artist
-    artist.add_song(self) unless artist.songs.include?(self)
   end
 
 end
